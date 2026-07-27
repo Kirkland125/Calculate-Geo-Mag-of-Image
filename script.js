@@ -1,13 +1,13 @@
 function calculateGeomag() {
     const pixelLength = parseFloat(document.getElementById('pixelLength').value);
-    const srb = parseFloat(document.getElementById('srb').value);
+    const pixelPitch = parseFloat(document.getElementById('pixelPitch').value);
     const objectLength = parseFloat(document.getElementById('objectLength').value);
 
     const errorMsg = document.getElementById('errorMsg');
     const resultBox = document.getElementById('resultBox');
     const resultValue = document.getElementById('resultValue');
 
-    if (isNaN(pixelLength) || isNaN(srb) || isNaN(objectLength)) {
+    if (isNaN(pixelLength) || isNaN(pixelPitch) || isNaN(objectLength)) {
         errorMsg.textContent = 'Please fill in all fields with valid numbers.';
         errorMsg.style.display = 'block';
         resultBox.classList.remove('show');
@@ -23,7 +23,7 @@ function calculateGeomag() {
 
     errorMsg.style.display = 'none';
 
-    const geomag = (pixelLength * srb) / objectLength;
+    const geomag = (pixelLength * pixelPitch) / objectLength;
 
     resultValue.textContent = geomag.toFixed(4);
     resultBox.classList.add('show');
