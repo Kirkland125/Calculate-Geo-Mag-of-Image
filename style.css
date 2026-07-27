@@ -15,9 +15,9 @@ body {
 }
 
 .layout {
-    position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 460px;
 }
@@ -35,19 +35,10 @@ body {
 }
 
 .formula-panel {
-    position: absolute;
-    left: 100%;
-    top: 8px;
-    margin-left: 24px;
-    width: 150px;
-}
-
-.formula-panel-label {
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: #6b74a0;
-    margin-bottom: 14px;
+    width: 100%;
+    max-width: 460px;
+    margin-bottom: 16px;
+    text-align: center;
 }
 
 .badge {
@@ -75,13 +66,14 @@ p.subtitle {
 
 .formula-box {
     font-size: 0.85rem;
+    font-weight: 700;
     line-height: 1.5;
-    color: #c6cdef;
-    text-align: left;
+    color: #f5a623;
+    letter-spacing: 0.04em;
 }
 
 .formula-box strong {
-    color: #ffffff;
+    color: #f5a623;
     font-weight: 700;
 }
 
@@ -192,26 +184,6 @@ button:active {
     font-size: 0.85rem;
     margin-top: 12px;
     display: none;
-}
-
-@media (max-width: 700px) {
-    .layout {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .formula-panel {
-        position: static;
-        margin-left: 0;
-        margin-top: 20px;
-        width: 100%;
-        max-width: 460px;
-        text-align: center;
-    }
-
-    .formula-box {
-        text-align: center;
-    }
 }
 
 @media (max-width: 480px) {
