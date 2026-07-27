@@ -34,6 +34,22 @@ body {
     text-align: center;
 }
 
+.note-panel {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(120, 140, 255, 0.18);
+    color: #f5a623;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.note-panel + .note-panel {
+    margin-top: 12px;
+    padding-top: 0;
+    border-top: none;
+}
+
 .formula-panel {
     width: 100%;
     max-width: 460px;
@@ -170,9 +186,16 @@ button:active {
     color: #6b74a0;
 }
 
+.result.show {
+    border-color: rgba(53, 224, 166, 0.4);
+}
+
 .result.show .value {
     font-size: 2rem;
-    color: #ffffff;
+    background: linear-gradient(90deg, #35e0a6, #5b7cff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .error {
